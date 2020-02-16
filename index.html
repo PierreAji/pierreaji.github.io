@@ -78,55 +78,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- main js file -->
-        <script src="js/main.js"></script>
-
-        <script>
-            $(document).ready(function () {
-
-                // random style on page load
-                let display_text = ''
-                switch (Math.round(Math.random() * 2 + 1)) {
-                    case 1:
-                        styleDefault();
-                        display_text = 'Style Block'
-                        break;
-                    case 2:
-                        styleSpace();
-                        display_text = 'Style Space'
-                        break;
-                    case 3:
-                        styleSnow();
-                        display_text = 'Style Snow'
-                        break;
-                    default:
-                        styleSpace();
-                        display_text = 'Style Block'
-                }
-                $('#selstyle').text(display_text);
-
-                $('#changestyle .dropdown-menu a').click(function () {
-                    var style = $(this).data('val');
-                    switch (style) {
-                        case 'default':
-                            styleDefault();
-                            break;
-                        case 'space':
-                            styleSpace();
-                            break;
-                        case 'snow':
-                            styleSnow();
-                            break;
-                        default:
-                            styleSpace();
-                    }
-                    $('#selstyle').text($(this).text());
-                });
-
-                
-
-        </script>
 </body>
 
 </html>
